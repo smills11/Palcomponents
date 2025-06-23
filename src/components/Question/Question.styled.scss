@@ -1,0 +1,318 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-question {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  padding-inline: 15px;
+  padding-block: 18px 10px;
+  background-color: $color_source_white;
+  border-radius: 12px;
+  box-shadow:
+    rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+  .ui-question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .ui-question-user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+
+  .ui-question-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .ui-question-avatar-placeholder {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .ui-question-author {
+    font-weight: normal;
+    font-size: 12px;
+    color: $color_source_grey6;
+  }
+
+  .ui-question-meta-container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint_s) {
+      flex-direction: column-reverse;
+      align-items: end;
+    }
+  }
+  .ui-question-time {
+    font-weight: normal;
+    font-size: 10px;
+    color: $color_source_grey3;
+  }
+
+  .ui-question-options {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $color_source_grey3;
+    position: relative;
+    padding: 0;
+  }
+
+  .ui-question-options-btn {
+    color: $color_source_grey3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+
+    @media screen and (max-width: $breakpoint_s) {
+      margin-bottom: 4px;
+    }
+  }
+
+  .ui-question-options-menu {
+    width: 80px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: $color_source_white;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px 0px $color_source_grey3;
+  }
+
+  .ui-question-options-menu-item {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 10px 10px 6px;
+    font-size: 10px;
+    color: $color_source_grey2;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color_source_white2;
+    }
+  }
+
+  .ui-question-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $color_source_grey2;
+    margin-top: 5px;
+    margin-bottom: 13px;
+    word-wrap: break-word;
+  }
+
+  .ui-questions-inter-cont {
+    display: flex;
+    gap: 5px;
+  }
+
+  .ui-question-interactions {
+    width: fit-content;
+    background-color: $color_source_pink1;
+    border-radius: 13px;
+    padding-block: 0;
+    padding-inline: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: $color_source_grey3;
+    line-height: 1;
+    cursor: pointer;
+
+    svg {
+      color: $color_source_pink2;
+      width: 12px;
+      stroke-width: 3;
+    }
+  }
+
+  .ui-question-comments-badge,
+  .ui-question-likes-badge {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .ui-question-category {
+    display: inline-block;
+    margin-bottom: 1rem;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-inline: 20px;
+    padding-block: 7px;
+    background-color: $color_source_pink1;
+    border: 1px solid $color_source_pink2;
+
+    @media screen and (max-width: $breakpoint_s) {
+      font-size: 13px;
+      padding-inline: 15px;
+      padding-block: 5px;
+    }
+  }
+
+  .ui-question-footer {
+    padding: 0.75rem 0 3px;
+    display: flex;
+  }
+
+  .ui-question-camera-btn {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 10px 0 0;
+
+    input {
+      display: none;
+      visibility: hidden;
+    }
+
+    svg {
+      width: 20px;
+    }
+  }
+
+  .ui-question-comment-heading {
+    color: #ff6799;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .ui-question-response {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 0;
+
+    .ui-question-response-box {
+      border-radius: 20px;
+      min-height: 30px;
+      border: 0.7px solid $color_source_grey3;
+      input {
+        width: 100%;
+        padding: 0px 7px 0px 3px;
+        border-radius: 5px;
+        border: none;
+        line-height: 0;
+        font-size: 12px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $color_source_grey3;
+          font-size: 12px;
+        }
+      }
+      button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .ui-question-response-input-cont {
+      width: 100%;
+      display: flex;
+      padding-block: 3.5px;
+      padding-left: 8px;
+    }
+
+    .ui-question-response-image {
+      max-height: 6rem;
+      width: auto;
+      margin: 0.5rem 0.5rem 0rem 0.5rem;
+      display: flex;
+
+      img {
+        max-height: 6rem;
+        width: auto;
+      }
+    }
+  }
+
+  .ui-question-comments {
+    overflow: hidden;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .ui-question-comments > div {
+    margin: 8px 0 0;
+  }
+
+  .ui-question-reply-link {
+    width: max-content;
+    text-decoration: underline;
+    font-size: 12px;
+    color: $color_source_grey2;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .ui-question-comments-quantity-toggle {
+    font-size: 8px;
+    color: $color_source_grey3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      background-color: $color_source_pink1;
+      border-radius: 7px;
+    }
+    svg {
+      width: 17px;
+      height: 13px;
+      color: $color_source_pink2;
+      stroke-linecap: butt;
+    }
+  }
+
+  .ui-question-top-comment {
+    margin-bottom: 20px !important;
+  }
+}

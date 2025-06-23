@@ -1,0 +1,54 @@
+body,
+body * {
+  font-family: Roboto, Helvetica, Tahoma, sans-serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.send-img {
+  width: 14px;
+
+  img {
+      width: 100%;
+  }
+}
+
+// Breakpoints
+$breakpoint_xs: 400px;
+$breakpoint_s: 576px;
+$breakpoint_m: 768px;
+$breakpoint_l: 992px;
+$breakpoint_xl: 1200px;
+
+// Color Palette
+
+// Pink
+$color_source_pink1: #FFE5EE;
+$color_source_pink2: #FF6799;
+$color_source_pink3: #FFF9FA;
+$color_source_pink4: #FFFAFB;
+$color_source_pink5: #FFF2F5;
+$color_source_pink6: #FF93B6;
+
+// White
+$color_source_white: #FFFFFF;
+$color_source_white2: #F8F8F8;
+$color_source_white3: #E9E9E9;
+$color_source_white4: #CEC9C9;
+
+// Grey
+$color_source_grey1: #535353;
+$color_source_grey2: #343434;
+$color_source_grey3: #8A8A8A;
+$color_source_grey4: #F2F2F2;
+$color_source_grey5: #9B9B9B;
+$color_source_grey5: #525252;
+$color_source_grey6: #5F5F5F;
+$color_source_grey7: #E8E8E8;
+$color_source_grey8: #66645F;
+
+// Black
+$color_source_black: #000000;
+
+//Blue
+$color_source_blue: #5498FF;

@@ -1,0 +1,85 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-home {
+  width: 100%;
+  height: 92%;
+  background-color: $color_source_pink3;
+  margin-bottom: 1rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow:
+    rgba(9, 30, 66, 0.25) 0px 4px 4px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .ui-home-title {
+    width: 25rem;
+    margin-bottom: 10px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .ui-home-sub-title {
+    font-weight: bolder;
+    font-size: 1.25rem;
+    color: $color_source_grey1;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .ui-portal-button-home {
+    margin: 0.5rem 0;
+  }
+
+  @media (max-width: $breakpoint_m) {
+    .ui-home-title {
+      width: 20rem;
+    }
+
+    .ui-home-sub-title {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .ui-home-auth-section {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ui-home-login-section {
+    color: $color_source_pink6;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0.6rem;
+    cursor: pointer;
+
+    span {
+      color: $color_source_pink6;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+
+  .ui-home-social-icons {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+
+    a {
+      cursor: pointer;
+      margin: 0 6px;
+    }
+  }
+}

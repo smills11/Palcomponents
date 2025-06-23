@@ -1,0 +1,126 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-chat-categories-container {
+  width: 100%;
+  position: relative;
+}
+
+.ui-chat-categories-header-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0.375rem auto;
+  border: none;
+  cursor: pointer;
+  color: $color_source_pink2;
+  background-color: $color_source_pink1;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+
+    @media screen and (max-width: $breakpoint_xs) {
+      font-size: 11px;
+    }
+  }
+}
+
+.ui-chat-categories-chevron {
+  transition: transform 0.3s ease;
+
+  &--rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.ui-chat-categories-expandable {
+  display: grid;
+  transition: all 0.3s ease;
+  transform-origin: top;
+  grid-template-rows: 0fr;
+  opacity: 0;
+
+  &--expanded {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+.ui-chat-categories-content-wrapper {
+  overflow: hidden;
+}
+
+.ui-chat-categories-content {
+  padding: 1rem;
+}
+
+.ui-chat-categories-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: $color_source_grey2;
+  margin-bottom: 1rem;
+}
+
+.ui-chat-categories-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ui-chat-categories-category-button {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background-color: $color_source_white;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  color: $color_source_grey2;
+  font-size: 14px;
+  border: 1px solid $color_source_grey3;
+
+  @media screen and (max-width: $breakpoint_xs) {
+    font-size: 11px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  &.selected {
+    background-color: $color_source_pink2;
+    font-weight: 500;
+    color: white;
+    border: none;
+  }
+}
+
+.ui-chat-categories-view-all {
+  width: 100%;
+  font-size: 14px;
+  color: $color_source_grey2;
+  margin-top: 0.5rem;
+  background-color: inherit;
+  border: none;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: right;
+  padding-bottom: 1rem;
+  cursor: pointer;
+
+  @media screen and (max-width: $breakpoint_xs) {
+    font-size: 11px;
+  }
+}
+
+.ui-chat-categories-toggle {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color_source_grey3;
+  width: 21px;
+  border-radius: 10px;
+  height: 2px;
+  cursor: pointer;
+  border: none;
+}

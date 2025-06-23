@@ -1,0 +1,122 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-chat-slot-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.ui-chat-slot {
+  position: relative;
+  width: 100%;
+  border-radius: 7px;
+  padding: 0.75rem;
+  border: 1px solid $color_source_grey7;
+  cursor: pointer;
+  display: grid;
+  background-color: $color_source_white;
+}
+
+.ui-chat-slot-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.ui-chat-slot-grid-item-1 {
+  width: 80%;
+}
+
+.ui-chat-slot-grid-item-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.ui-chat-slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.ui-chat-slot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ui-chat-slot-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: $color_source_pink2;
+}
+
+.ui-chat-slot-img {
+  width: 18px;
+}
+
+.ui-chat-slot-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: $color_source_grey5;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.ui-chat-slot-bookmark {
+  cursor: pointer;
+  svg {
+    fill: $color_source_pink2;
+  }
+}
+
+.ui-chat-slot-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 48px);
+  height: 100%;
+  position: absolute;
+  right: -97px;
+}
+
+.ui-chat-slot-time {
+  color: $color_source_grey8;
+  font-size: 10px;
+}
+
+.ui-chat-slot-count {
+  background-color: $color_source_blue;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.ui-chat-slot-edit-btn,
+.ui-chat-slot-delete-btn {
+  outline: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+  }
+}
+
+
+
+.ui-chat-slot-edit-btn {
+  background-color: #7167ff;
+}
+
+.ui-chat-slot-delete-btn {
+  background-color: #fd4f4f;
+}

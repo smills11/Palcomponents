@@ -1,0 +1,31 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-pageLayout {
+    display: flex;
+    background-color: $color_source_pink4;
+    overflow: hidden;
+
+    .ui-page-sidebar-cont {
+        width: auto;
+    }
+
+    .ui-page-content-cont {
+        overflow-x: hidden;
+        overflow-y: auto;
+        flex-grow: 1;
+        padding: 0.875rem;
+    }
+
+    @media (max-width: $breakpoint_s) {
+        flex-direction: column;
+
+        .ui-page-content-cont {
+            order: 0;
+            padding: 0px;
+        }
+
+        .ui-page-sidebar-cont {
+            order: 1;
+        }
+    }
+}

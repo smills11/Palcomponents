@@ -1,0 +1,78 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-comment {
+  display: flex;
+  align-items: flex-end;
+  border-radius: 8px;
+  max-width: max-content;
+
+  .ui-comment-avatar {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 7px;
+  }
+
+  .ui-comment-content {
+    flex: 1;
+    background-color: $color_source_white2;
+    border-radius: 12px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ui-comment-author {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .ui-comment-text {
+    color: $color_source_grey2;
+  }
+
+  .ui-comment-image {
+    max-height: 6rem;
+    border-radius: 0.6rem;
+    margin-bottom: 0.3rem;
+
+    img {
+      max-height: 6rem;
+      width: auto;
+      border-radius: 0.6rem;
+    }
+  }
+
+  .ui-comment-text-content {
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  .ui-comment-reactions {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 25px;
+    height: 16.5px;
+    background-color: #F2F2F2;
+    border-radius: 31px;
+    bottom: -8px;
+    border: 1px solid #fff;
+    right: 18px;
+  }
+
+  .ui-comment-heart-react {
+    padding-right: 2px;
+    margin-bottom: 1px;
+  }
+
+  .ui-comment-reaction-count {
+    text-align: center;
+    color: #8A8A8A;
+    font-size: 8px;
+  }
+}

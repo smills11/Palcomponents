@@ -1,0 +1,55 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-comment-list {
+  .ui-comments-visible {
+    display: block;
+  }
+
+  .ui-comments-hidden {
+    overflow: hidden;
+    max-height: 0; 
+    transition: max-height 0.4s ease-in-out; 
+  }
+
+  .ui-comments-hidden.ui-comments-hidden-to-visible {
+    max-height: 100rem;
+  }
+
+    .ui-comment-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+        
+        .ui-comment {
+          max-width: 80%;
+        }
+    }
+    .ui-comment-toggle {
+        font-size: 10px;
+        font-weight: bold;
+        color: $color_source_grey3;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 0;
+        cursor: pointer;
+    
+        span {
+          width: 18px;
+          height: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2px;
+          background-color: $color_source_white2;
+          border-radius: 50%;
+        }
+        svg {
+          width: 17px;
+          height: 13px;
+          color: $color_source_grey3;
+          stroke-linecap: butt;
+        }
+    }
+}

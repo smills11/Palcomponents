@@ -1,0 +1,114 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-search-filter-modal {
+  position: absolute;
+  top: 150px;
+  z-index: 25;
+  bottom: 0;
+  background-color: white;
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0 -4px 11px rgba(0, 0, 0, 0.2);
+
+  .ui-post-close-button {
+    position: absolute;
+    top: 1rem;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Top title
+  .ui-search-filter-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color_source_grey2;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid $color_source_white4;
+  }
+
+  // Filter sections
+  .ui-search-filter-section-cont {
+    padding-inline: 25px;
+  }
+
+  .ui-search-filter-section:first-child {
+    border-bottom: 0.5px solid $color_source_white4;
+    padding-bottom: 25px;
+  }
+
+  .ui-search-filter-section-title {
+    font-size: 16px;
+    color: $color_source_grey2;
+    text-align: left;
+    font-weight: bold;
+    margin-block: 20px;
+  }
+
+  .ui-search-filter-options-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .ui-search-filter-option {
+    font-size: 12px;
+    font-weight: normal;
+    padding-inline: 12px;
+    padding-block: 8px;
+    border-radius: 8px;
+    background-color: $color_source_pink5;
+    color: $color_source_pink2;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &.selected {
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      color: $color_source_white;
+      background-color: $color_source_pink2;
+    }
+  }
+
+  // Button section
+  .ui-search-filter-actions-cont {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-top: 1px solid $color_source_white4;
+    padding: 20px;
+    padding-inline: 40px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    .ui-search-filter-clear-all-btn {
+      background-color: transparent;
+      color: $color_source_grey2;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: underline;
+      border: none;
+      font-family: "Roboto";
+      cursor: pointer;
+    }
+
+    .ui-search-filter-apply-btn {
+      display: inline-block;
+      background-color: $color_source_pink2;
+      color: $color_source_white;
+      font-weight: 500;
+      padding-inline: 16px;
+      padding-block: 10px;
+      align-self: center;
+      border: none;
+      font-family: "Roboto";
+      border-radius: 9px;
+      cursor: pointer;
+    }
+  }
+}

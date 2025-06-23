@@ -1,0 +1,11 @@
+@import "../../styles/themes/theme.scss";
+
+.ui-main {
+    width: 100%;
+    margin: 0rem auto 0rem;
+    display: block;
+    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    box-sizing: border-box;
+}
